@@ -69,9 +69,9 @@ def click(x, y):
     # convert to ctypes pixels
     # x = int(x * 0.666)
     # y = int(y * 0.666)
-    ctypes.windll.user32.SetCursorPos(x, y)
-    ctypes.windll.user32.mouse_event(2, 0, 0, 0, 0)  # left down
-    ctypes.windll.user32.mouse_event(4, 0, 0, 0, 0)  # left up
+    # ctypes.windll.user32.SetCursorPos(x, y)
+    ctypes.windll.user32.mouse_event(0x0008, 0, 0, 0, 0)  # right down
+    ctypes.windll.user32.mouse_event(0x0010, 0, 0, 0, 0)  # right up
 
 
 def moveMouseTo(x, y):
